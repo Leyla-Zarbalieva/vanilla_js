@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+  let a = +prompt('price 1');
+  let b = +prompt('price 2');
+  let c = +prompt('price 3');
+  let sum = a + b + c;
+
+  if (sum > 300) {
+    alert('доставка бесплатная!');
+  } else {
+    deliverySE(sum);
+  }
+function deliverySE (sum){
+           let delivery= prompt('тип доставки? (standart/express)'); 
+           let deliverySum;
+           
+           if(delivery== 'standart'){
+            deliverySum = sum + 20000;
+            alert(deliverySum)
+        }
+        else if(delivery == 'express'){
+            deliverySum = sum + 50000;
+            alert(deliverySum)
+        }
+        else{
+            alert('неверный тип доставки')
+        } 
+        
+        let premium= prompt('ваш статус премиум?(да/нет)');
+            if (premium ==='да'){
+                let premiumSum = deliverySum -(deliverySum * 0.1) ;
+                alert(premiumSum)
+            }
+            else{
+                
+                alert(deliverySum)
+            }
+    
+    }
+  
+</script>
+</body>
+</html>

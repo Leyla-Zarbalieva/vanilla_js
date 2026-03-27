@@ -23,14 +23,15 @@ function deliverySE (sum){
            
            if(delivery== 'standart'){
             deliverySum = sum + 20000;
-            alert(deliverySum)
+            alert(`Итоговая сумма с стандартной доставкой: ${deliverySum}`)
         }
         else if(delivery == 'express'){
             deliverySum = sum + 50000;
-            alert(deliverySum)
+            alert(`Итоговая сумма с экспресс доставкой: ${deliverySum}`)
         }
         else{
             alert('неверный тип доставки')
+            return
         } 
         
         let premium= prompt('ваш статус премиум?(да/нет)');

@@ -7,6 +7,13 @@
 </head>
 <body>
    <script>
+     
+  
+       FinalPayment ()
+   
+  
+
+ function FinalPayment (){
   let a = +prompt('price 1');
   let b = +prompt('price 2');
   let c = +prompt('price 3');
@@ -15,9 +22,16 @@
 
   if (sum > 300) {
     alert('доставка бесплатная!');
-  } else {
+  } 
+  else if(sum< 150){
+  alert('Минимальная сумма заказа: 150');
+  }
+  else {
     deliverySE(sum);
   }
+  }
+
+
 function deliverySE (sum){
            let delivery= prompt('тип доставки? (стандарт/экспресс)'); 
            let deliverySum;
@@ -61,10 +75,7 @@ function deliverySE (sum){
                 couponSum = premiumSum;
                 alert(`Итоговая сумма без купона: ${couponSum}`)
             }
-        if (couponSum< 150){
-            alert('Минимальная сумма заказа: 150');
-            return
-        }
+       
         let balance =+prompt ('Ваш баланс на карте?');
             if(balance >= couponSum){
                 alert ('Покупка успешна')
@@ -74,7 +85,13 @@ function deliverySE (sum){
             }
 
     }
-  
+
+  let message= prompt('начать заново? (да/нет)');
+   if (message == 'да'){
+       FinalPayment ()
+   } else{
+    alert ('удачного дня')
+   }
 </script>
 </body>
 </html>
